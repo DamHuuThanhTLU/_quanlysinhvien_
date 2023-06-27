@@ -9,7 +9,6 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.example.quanlysinhvien.model.Student;
 import com.example.quanlysinhvien.model.Subject;
 
 public class database extends SQLiteOpenHelper {
@@ -100,7 +99,7 @@ public class database extends SQLiteOpenHelper {
         return true;
     }
     //cập nhật sinh viên
-    public boolean UpdateStudent(Student student, int id){
+    public boolean UpdateStudent(Subject student, int id){
 
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -138,7 +137,7 @@ public class database extends SQLiteOpenHelper {
 
 
     //Insert student
-    public void AddStudent(Student student){
+    public void AddStudent(Subject student){
         SQLiteDatabase db = this.getWritableDatabase();
 
         //không thể lưu trực tiếp xuống insert nên thông qua contentvalues
